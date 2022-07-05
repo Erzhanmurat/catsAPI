@@ -7,13 +7,13 @@ import Favorites from "./pages/Favorites";
 
 function App() {
   return (
-    <div>
+    <>
       < Header />
         <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="favorites" element={<Favorites />} />
         </Routes>
-    </div>
+    </>
   );
 }
 

@@ -9,7 +9,7 @@ switch (action.type){
     case "ADD_TO_FAVORITES" :
         return {...state, favorites: [...state.favorites, action.payload]}
     case "REMOVE_FROM_FAVORITES" :
-        return {...state, favorites: [...state.favorites.filter((favoriteCat) => favoriteCat.id !== action.payload.id)]}
+        return {...state, favorites: state.favorites.filter((favoriteCat) => favoriteCat.id !== action.payload.id)}
 
     default:
         return state

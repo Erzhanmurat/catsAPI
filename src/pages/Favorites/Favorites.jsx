@@ -10,15 +10,15 @@ const Favorites = () => {
     return (
         <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-6">
-            {
-                favorites.map((cat) => (
+             {
+                 favorites.length ?  favorites.map((cat) => (
                     <div key={cat.id} className="cat-card relative w-full h-48 bg-red-400 rounded-lg flex flex-col justify-center items-center">
                         <img className="object-center object-cover h-full w-full"
                              src={cat.url}
                              alt={cat.url} />
                         <div className="favorite_added" onClick={() => removeFromFavorites(cat)}/>
                     </div>
-                ))
+                )): <p className="ml-10">Нет любимых котиков</p>
             }
             </div>
         </div>

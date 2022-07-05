@@ -27,11 +27,16 @@ code {
   transition: 0.5s;
 }
 .favorite:hover {
-
   background-image: url("assets/images/favorite-filled.svg");
 }
 .cat-card:hover .favorite {
 opacity: 1;
+}
+.navbar {
+  background: #2196F3;
+}
+.navbar .active {
+  background-color: #1E88E5;
 }
 .favorite_added {
   position: absolute;
@@ -39,6 +44,27 @@ opacity: 1;
   bottom: 28px;
   width: 40px;
   height: 37px;
+  opacity: 0;
+  transition: 0.5s;
   background-image: url("assets/images/favorite-added.svg");
   cursor: pointer;
+}
+.cat-card:hover .favorite_added {
+  opacity: 1;
+}
+.pagination {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 30px;
+}
+.pagination-btn .active {
+  background: #1E88E5;
+}
+.pagination-btn{
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  background: #2196F3;
+  color: white;
 }
