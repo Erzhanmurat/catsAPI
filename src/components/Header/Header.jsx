@@ -8,9 +8,11 @@ const Header = () => {
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <div className="flex items-center lg:order-2">
                         <NavLink to="/"
-                           className="text-white font-medium text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Все котики</NavLink>
+                                 className="text-white font-medium text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Все
+                            котики</NavLink>
                         <NavLink to="/favorites"
-                           className="text-white font-medium text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Любимые котики</NavLink>
+                                 className="text-white font-medium text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">Любимые
+                            котики</NavLink>
                     </div>
                 </div>
             </nav>

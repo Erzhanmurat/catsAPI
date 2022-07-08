@@ -1,18 +1,23 @@
-import React from 'react';
-import {NavLink} from "react-router-dom";
+import React, {} from 'react';
+import ReactPaginate from "react-paginate";
 
-const PaginationBtn = ({setPage}) => {
+const PaginationBtn = ({setPage, pageCount}) => {
     return (
-            <div className="pagination">
-                {Array(Math.ceil(10)).fill(0).map((btnNum, idx) => (
-                        <NavLink
-                            to={idx + 1}
-                            key={idx}
-                            className="pagination-btn"
-                            onClick={() => setPage(idx)}>{idx + 1}
-                        </NavLink>
-                    ))}
-            </div>
+        <>
+            <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                onPageChange={setPage}
+                pageRangeDisplayed={5}
+                pageCount={pageCount}
+                previousLabel="< previous"
+                containerClassName="pagination"
+                pageLinkClassName="page-num"
+                previousLinkClassName="page-num"
+                nextLinkClassName="page-num"
+                activeLinkClassName="active"
+            />
+        </>
     );
 };
 
